@@ -1,5 +1,2 @@
 #!/bin/sh
-call=$(nordvpn status | egrep "Status:|City:" |
-	sed 's/Status:/NordVPN:/g')
-
-echo "$call"
+echo $(nordvpn status | egrep "Status:|City:" | sed 's/Status:/NordVPN:/g')
